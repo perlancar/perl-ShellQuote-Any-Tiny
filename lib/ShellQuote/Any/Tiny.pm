@@ -13,13 +13,18 @@ sub shell_quote {
     my $arg = shift;
 
     if ($^O eq 'MSWin32') {
+        if ($arg =~ /\A\w+\z/) {
+            return $arg;
+        }
+        $arg =~ s/([\\"])/\\$1/g;
+        return qq("$arg");
     } else {
         if ($arg =~ /\A\w+\z/) {
             return $arg;
         }
         $arg =~ s/\\/\\\\/g;
         $arg =~ s/'/'"'"'/g;
-        "'$arg'";
+        return "'$arg'";
     }
 }
 
