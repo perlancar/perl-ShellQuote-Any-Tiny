@@ -48,6 +48,11 @@ Unix shells or Windows) using as little code as possible. For more proper
 quoting, see See Also section.
 
 
+=head1 FUNCTIONS
+
+=head2 shell_quote($str) => str
+
+
 =head1 SEE ALSO
 
 L<String::ShellQuote> for Unix shells
