@@ -25,8 +25,9 @@ sub test_echo {
         if ($^O eq 'MSWin32') {
             $cmd = "\"$^X\" -e\"print \$ARGV[0]\" ".shell_quote($args{arg});
         } else {
-            $cmd = 'echo '.shell_quote($args{arg});
+            $cmd = "'$^X' -e'print \$ARGV[0]' ".shell_quote($args{arg});
         }
+        #diag "CMD: $cmd";
         my $result = `$cmd`;
         chomp($result);
         is($result, $args{result}, "result");

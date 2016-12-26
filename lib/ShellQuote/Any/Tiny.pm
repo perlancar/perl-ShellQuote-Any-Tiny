@@ -22,7 +22,6 @@ sub shell_quote {
         if ($arg =~ /\A\w+\z/) {
             return $arg;
         }
-        $arg =~ s/\\/\\\\/g;
         $arg =~ s/'/'"'"'/g;
         return "'$arg'";
     }
