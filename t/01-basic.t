@@ -20,7 +20,7 @@ done_testing;
 sub test_echo {
     my %args = @_;
 
-    subtest +($args{name} // $args{arg}) => sub {
+    subtest +($args{name} || $args{arg}) => sub {
         my $cmd;
         if ($^O eq 'MSWin32') {
             $cmd = "\"$^X\" -e\"print \$ARGV[0]\" ".shell_quote($args{arg});
