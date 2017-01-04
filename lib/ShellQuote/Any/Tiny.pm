@@ -4,7 +4,7 @@ package ShellQuote::Any::Tiny;
 # VERSION
 
 use strict;
-use warnings;
+#use warnings;
 
 use Exporter qw(import);
 our @EXPORT_OK = qw(shell_quote);
