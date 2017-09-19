@@ -1,3 +1,12 @@
+0.006   2017-09-19 (PERLANCAR)
+
+        - [Bugfix] Fix escaping for Win32, only backslash that is followed by
+          another backslash or is the last backslash shall be escaped
+          [RT#123031].
+
+        - Allow overriding OS with $OS package variable.
+
+
 0.005   2017-08-16 (PERLANCAR)
 
 	- No functional changes.
