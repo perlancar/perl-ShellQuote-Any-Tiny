@@ -12,6 +12,8 @@ test_echo(arg => 'hello', result => 'hello');
 test_echo(arg => 'hello world', result => 'hello world');
 test_echo(arg => 'a\\', result => 'a\\');
 test_echo(arg => 'a\\\\', result => 'a\\\\');
+test_echo(arg => 'a\\ \\', result => 'a\\ \\');
+test_echo(arg => 'a\\ \\\\', result => 'a\\ \\\\');
 test_echo(arg => "'", result => "'");
 test_echo(arg => '"', result => '"');
 

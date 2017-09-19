@@ -8,15 +8,20 @@ use strict;
 
 use Exporter qw(import);
 our @EXPORT_OK = qw(shell_quote);
+our $OS;
 
 sub shell_quote {
     my $arg = shift;
 
-    if ($^O eq 'MSWin32') {
+    my $os = $OS || $^O;
+
+    if ($os eq 'MSWin32') {
         if ($arg =~ /\A\w+\z/) {
             return $arg;
         }
-        $arg =~ s/([\\"])/\\$1/g;
+        # escape backslash that is followed by a backslash, or the last
+        # backslash
+        $arg =~ s/(\\(?!.*\\)|\\(?=\\)|")/\\$1/g;
         return qq("$arg");
     } else {
         if ($arg =~ /\A\w+\z/) {
