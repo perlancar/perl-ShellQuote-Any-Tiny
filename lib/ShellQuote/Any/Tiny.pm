@@ -19,9 +19,8 @@ sub shell_quote {
         if ($arg =~ /\A\w+\z/) {
             return $arg;
         }
-        # escape backslash that is followed by a backslash, or the last
-        # backslash
-        $arg =~ s/(\\(?!.*\\)|\\(?=\\)|")/\\$1/g;
+        $arg =~ s/\\(?=\\*(?:"|$))/\\\\/g;
+        $arg =~ s/"/\\"/g;
         return qq("$arg");
     } else {
         if ($arg =~ /\A\w+\z/) {
