@@ -1,10 +1,10 @@
-0.007   2017-09-20 (PERLANCAR)
+0.007   2017-09-20  Released-By: PERLANCAR
 
 	- Second attempt of fixing escaping on Win32, thanks to Vadim Repin
 	  [RT#123031] ref: http://perlmonks.org/?node_id=1199727.
 
 
-0.006   2017-09-19 (PERLANCAR)
+0.006   2017-09-19  Released-By: PERLANCAR
 
         - [Bugfix] Fix escaping for Win32, only backslash that is followed by
           another backslash or is the last backslash shall be escaped
@@ -13,7 +13,7 @@
         - Allow overriding OS with $OS package variable.
 
 
-0.005   2017-08-16 (PERLANCAR)
+0.005   2017-08-16  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -21,25 +21,25 @@
 	  inheriting) [CT].
 
 
-0.004   2017-01-04 (PERLANCAR)
+0.004   2017-01-04  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Avoid use of 'warnings' to reduce startup overhead.
 
 
-0.003   2016-12-27 (PERLANCAR)
+0.003   2016-12-27  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Fix failing test, avoid use of 5.10-ism (defined-or) [CT].
 
 
-0.002   2016-12-26 (PERLANCAR)
+0.002   2016-12-26  Released-By: PERLANCAR
 
 	- Fix failing tests on Unix [CT].
 
 
-0.001   2016-12-25 (PERLANCAR)
+0.001   2016-12-25  Released-By: PERLANCAR
 
         - First release.
